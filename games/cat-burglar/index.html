@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Cat Burglar: effects sandbox</title>
+<link rel="icon" href="data:,">
+<style>
+  html,body{margin:0;height:100%;background:#181425;overflow:hidden;color:#c0cbdc;font:12px/1.5 ui-monospace,Menlo,monospace}
+  body{display:flex;align-items:center;justify-content:center}
+  canvas{image-rendering:pixelated;display:block}
+  #hud{position:fixed;left:10px;top:10px;background:#181425d9;padding:8px 10px;border-radius:4px;width:190px}
+  #hud b{color:#feae34;display:inline-block;width:14px}
+  .off{opacity:.42}
+  #time{width:100%;margin:6px 0 0}
+  #label{color:#feae34}
+</style>
+<canvas id="c"></canvas>
+<div id="hud">
+  <div id="panel"></div>
+  <div style="margin-top:6px">time: <span id="label"></span></div>
+  <input id="time" type="range" min="0" max="1000" value="20">
+  <div style="opacity:.6;margin-top:4px">WASD / arrows: move cat</div>
+  <div style="margin-top:4px"><a href="https://github.com/AHTOOOXA/pixelkit" style="color:#feae34">source on GitHub</a></div>
+</div>
+<script type="module" src="./main.ts"></script>
+</html>
